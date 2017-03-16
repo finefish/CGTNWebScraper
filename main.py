@@ -25,7 +25,8 @@ for div in soup.find_all('div',class_='title'):
 
 now = datetime.now()
 
-DateFolderName = str(now.year) + '-' + str(now.month).zfill(2) + '-' + str(now.day).zfill(2)
+DateFolderName = sys.argv[2]
+DateFolderName += str(now.year) + '-' + str(now.month).zfill(2) + '-' + str(now.day).zfill(2)
 if not os.path.exists(DateFolderName):
     os.makedirs(DateFolderName)
 
